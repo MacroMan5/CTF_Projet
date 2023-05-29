@@ -1,0 +1,15 @@
+{
+  "name": "ctf-projet",
+  "version": "1.0.0",
+  "description": "1. Configuration de Docker Compose : Créez un fichier docker-compose.yml pour chaque challenge. Chaque fichier décrirait le ou les containers nécessaires pour ce challenge spécifique.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
