@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    #password {
+      padding: 10px;
+      font-size: 1.2em;
+    }
+
+    #go {
+      margin-left: 10px;
+      padding: 10px;
+      font-size: 1.2em;
+    }
+  </style>
+  <script>
+    const generatePassword = () => {
+      const currentTime = new Date();
+      const x = currentTime.getHours();
+      const y = currentTime.getMinutes();
+      const z = ["MTA=", "MjA=", "MzA=", "NDA="];
+      const xyz = z.map(value => {
+        const zz = parseInt(atob(value), 10); 
+        return (zz + x + y).toString(); 
+      });
+      const password = xyz.join("");
+      return password;
+    };
+
+    const submitPassword = () => {
+      const passwordInput = document.getElementById('password');
+      const password = passwordInput.value;
+      const formData = { password: password };
+
+      fetch('/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+        .then(response => {
+          if (response.redirected) {
+            window.location.href = response.url; 
+          }
+        })
+        .catch(error => {
+          console.log('Error:', error);
+        });
+    };
+
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <input type="password" id="password" placeholder="Password">
+    <button id="go" onclick="submitPassword()">Submit</button>
+  </div>
+</body>
+
+</html>
