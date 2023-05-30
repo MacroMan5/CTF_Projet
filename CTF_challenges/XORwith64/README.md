@@ -28,6 +28,8 @@ Il faut éxécuter xor_encoder.py pour généré le message chiffré `cipher.txt
 ## Réponse 
 
 - Le fichier decoder.py est un exemple qui fonctionne pour dechiffrer le message.
+- Le but est d'utiliser un script pour décoder plusieurs fois le message et ensuite utilisé la clé obtenue au challenge 1 
+- Se renseigner comment XOR fonctionne et décoder avec la clé 
  
 ## Flag
 
