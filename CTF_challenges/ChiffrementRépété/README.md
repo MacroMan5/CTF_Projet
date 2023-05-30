@@ -31,7 +31,9 @@ Bienvenue dans le challenge CTF "Automatisation is key". Dans ce défi, votre t�
 
 Le flag à trouver est de format : `01253{Flag_ici}`
 
-## Implémentation
+## Implémentation 
+Fichier statique, éxecuter le script pour généré le fichier à remettre au utilisateur. 
+Sinon avec docker : 
 1. Création image docker - `docker build -t xorwith64 .`
 2. Lancement du container - `docker run -it xorwith64`
 (Utilisation d'un docker compose est aussi envisageable pour lancer le container)
