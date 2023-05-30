@@ -26,6 +26,8 @@ Bienvenue dans le challenge CTF "Automatisation is key". Dans ce défi, votre t�
 ## Indice 
 
 - Le fichier decoder.py est un exemple de script qui peut vous aider à résoudre le défi.
+- Le but est de décoder le message en base64 mais on se rend compte que même en le décodant c'est encore du Base64
+- Le but du CTF est de créer un script pour faire un boucle pour décoder le message N fois. 
 
 ## Flag
 
