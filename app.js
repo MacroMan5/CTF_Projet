@@ -1,14 +1,14 @@
 const express = require('express');
 const challengesRouter = require('./routes/challenges');
+const path = require('path');
 const app = express();
 const port = 3000;
 
-app.use('/challenges', challengesRouter); // Tout ce qui commence par /challenges est redirigé vers le routeur challengesRouter
+// Static files middleware
+app.use(express.static(path.join(__dirname, 'public'))); // Assuming your index.html is in a directory named 'public' 
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+app.use('/challenges', challengesRouter); // All requests starting with /challenges are redirected to the challengesRouter
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
-});
+}); 
