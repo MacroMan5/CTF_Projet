@@ -1,3 +1,5 @@
+# Ne pas prendre ne compte dans évaluation   
+# Les 6 challenges se trouvent séparement dans CTF_challenges avec leurs documentations 
 
 
 # Installations et lancement des challenges sur un serveur web 
