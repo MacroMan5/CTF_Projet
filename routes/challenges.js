@@ -12,10 +12,6 @@ const challenges = [
   { id: 7, name: 'Stop Brute Force Attacker', description: '...', dockerService: 'attacker' },
 ];
 
-router.get('/', (req, res) => {
-  res.json(challenges);
-});
-
 router.get('/:id/start', (req, res) => {
   const challengeId = req.params.id;
   const challenge = challenges.find(c => c.id == challengeId);
@@ -36,6 +32,7 @@ router.get('/:id/start', (req, res) => {
     res.send('Challenge démarré avec succès');
   });
 });
+
 
 module.exports = router;
 
