@@ -52,8 +52,8 @@ Le joueur doit arrêter l'attaque par force brute dans les 10 minutes imparties.
 8. S'il échoue, le script disconnect_user.sh ferme la connexion SSH du joueur et affiche un message d'échec.
 
 
-# En résumé, en lançant l'environnement avec docker-compose up, vous créez et déployez deux conteneurs Docker interconnectés : 
-# l'un pour la machine victime et l'autre pour l'attaquant. Le joueur doit se connecter à la machine victime et arrêter l'attaque en cours pour # réussir le défi CTF.
+En résumé, en lançant l'environnement avec docker-compose up, vous créez et déployez deux conteneurs Docker interconnectés : 
+l'un pour la machine victime et l'autre pour l'attaquant. Le joueur doit se connecter à la machine victime et arrêter l'attaque en cours pour # réussir le défi CTF.
 
 
 # COMMANDE PRATIQUE POUR LE JEU 
@@ -72,8 +72,6 @@ cd ./hidden.flag
 cat 
 
 ## docker-compose 
-
-
   ssh_victim:
       build: .\myapp\CTF_challenges\STOP-BRUTEFORCE\ssh_victim
       privileged: true
