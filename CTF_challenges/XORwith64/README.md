@@ -36,7 +36,7 @@ Il faut éxécuter xor_encoder.py pour généré le message chiffré `cipher.txt
 Le flag à trouver est de format : `01253{Flag_ici}`
 
 ## Implémentation
-Fichier statique, éxecuter le script pour généré le fichier à remettre au utilisateur.
+Fichier statique, éxecuter le script pour généré le fichier à remettre aux utilisateurs. Chaque fichiers sera différent donc important de bien exécuté le script à chaque utlisateur.
  Sinon avec docker :
 1. Création image docker - `docker build -t xorwith64 .`
 2. Lancement du container - `docker run -it xorwith64`
