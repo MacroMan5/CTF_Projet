@@ -56,14 +56,14 @@ En résumé, en lançant l'environnement avec docker-compose up, vous créez et 
 l'un pour la machine victime et l'autre pour l'attaquant. Le joueur doit se connecter à la machine victime et arrêter l'attaque en cours pour # réussir le défi CTF.
 
 
-# COMMANDE PRATIQUE POUR LE JEU 
-ssh CTFuser@localhost -p 2222
-tail -f /var/log/auth.log 
-cd /var/log/ 
-cat auth.log 
-cat auth.log | grep "Failed password"
+## COMMANDE PRATIQUE POUR LE JEU 
+- ssh CTFuser@localhost -p 2222
+- tail -f /var/log/auth.log 
+- cd /var/log/ 
+- cat auth.log 
+- cat auth.log | grep "Failed password"
 
-# Bloquer l'attaque brute force en cours en utilisant la commande suivante :
+## Bloquer l'attaque brute force en cours en utilisant la commande suivante :
 sudo ufw deny from 192.168.10.169
 sudo iptables -A INPUT -s 192.168.10.169 -j DROP
 
