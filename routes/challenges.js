@@ -8,8 +8,7 @@ const challenges = [
   { id: 3, name: 'Login Page 1', description: '...', dockerService: 'loginpage' },
   { id: 4, name: 'Login Page 2', description: '...', dockerService: 'loginpage2' },
   { id: 5, name: 'Check The Log', description: '...', dockerService: 'checkthelog' },
-  { id: 6, name: 'Stop Brute Force', description: '...', dockerService: 'ssh_victim' },
-  { id: 7, name: 'Stop Brute Force Attacker', description: '...', dockerService: 'attacker' },
+  { id: 6, name: 'Stop Brute Force', description: '...', dockerService: ['ssh_victim', 'attacker'] },
 ];
 
 router.get('/:id/start', (req, res) => {
