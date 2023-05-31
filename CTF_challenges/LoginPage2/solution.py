@@ -6,7 +6,8 @@ def generate_password():
     current_time = datetime.now()
     x = current_time.hour
     y = current_time.minute
-    z = ["MTA=", "MjA=", "MzA=", "NDA="]
+    z = ["MTE=", "MzY=", "NjY=", "NDg="]
+
     
     xyz = []
     n = 1
