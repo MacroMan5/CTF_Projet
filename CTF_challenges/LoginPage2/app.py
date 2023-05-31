@@ -9,7 +9,7 @@ def generate_password():
     hours = currentTime.hour
     minutes = currentTime.minute
 
-    existing_values = [10, 20, 30, 40]
+    existing_values = [11, 36, 66, 48]
     combined_values = [str(int(value) + hours + minutes) for value in existing_values]
 
     password = ''.join(combined_values)
