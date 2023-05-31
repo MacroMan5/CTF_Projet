@@ -4,11 +4,12 @@ const router = express.Router();
 
 const challenges = [
   { id: 1, name: 'Automatisation is key', description: 'Dans ce défi, votre tâche est de décoder un message qui a été encodé.', dockerService: 'automatisationiskey' },
-  { id: 2, name: 'Challenge 2', description: '...', dockerComposeFile: 'challenge_2.yml' },
-    { id: 3, name: 'Challenge 3', description: '...', dockerComposeFile: 'challenge_3.yml' },
-    { id: 4, name: 'Challenge 4', description: '...', dockerComposeFile: 'challenge_4.yml' },
-    { id: 5, name: 'Challenge 5', description: '...', dockerComposeFile: 'challenge_5.yml' },
-    { id: 6, name: 'Challenge 6', description: '...', dockerComposeFile: 'challenge_6.yml' },
+  { id: 2, name: 'XOR with 64', description: '...', dockerService: 'xorwith64' },
+  { id: 3, name: 'Login Page 1', description: '...', dockerService: 'loginpage' },
+  { id: 4, name: 'Login Page 2', description: '...', dockerService: 'loginpage2' },
+  { id: 5, name: 'Check The Log', description: '...', dockerService: 'checkthelog' },
+  { id: 6, name: 'Stop Brute Force', description: '...', dockerService: 'ssh_victim' },
+  { id: 7, name: 'Stop Brute Force Attacker', description: '...', dockerService: 'attacker' },
 ];
 
 router.get('/', (req, res) => {
