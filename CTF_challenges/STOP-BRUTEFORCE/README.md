@@ -64,12 +64,13 @@ l'un pour la machine victime et l'autre pour l'attaquant. Le joueur doit se conn
 - cat auth.log | grep "Failed password"
 
 ## Bloquer l'attaque brute force en cours en utilisant la commande suivante :
-sudo ufw deny from 192.168.10.169
-sudo iptables -A INPUT -s 192.168.10.169 -j DROP
+- sudo ufw deny from 192.168.10.169
+- sudo iptables -A INPUT -s 192.168.10.169 -j DROP
 
-ls -a  
-cd ./hidden.flag
-cat 
+## Fichier ou le flag sera généré
+- ls -a  
+- cd ./hidden.flag
+- cat 
 
 ## docker-compose 
   ssh_victim:
