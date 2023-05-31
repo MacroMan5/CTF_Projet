@@ -17,7 +17,7 @@ Ce challenge consiste à réussir à accéder à une page protégée par un syst
 3. Analysez le code JavaScript dans le fichier `script.js` pour comprendre comment le mot de passe est généré.
 4. Utilisez vos connaissances du code et l'heure actuelle pour déterminer le mot de passe correct.
 5. Saisissez le mot de passe dans le champ de mot de passe et cliquez sur "Submit".
-6. Si le mot de passe est correct, vous serez redirigé vers la page `success.html` où vous trouverez le flag.
+6. Si le mot de passe est correct, vous serez redirigé vers la page où vous trouverez le flag.
 7. Si le mot de passe est incorrect, vous serez redirigé vers la page `error.html`.
 
  
