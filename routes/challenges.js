@@ -19,18 +19,27 @@ router.get('/:id/start', (req, res) => {
     res.status(404).send('Challenge non trouvé');
     return;
   }
-  
-  exec(`docker-compose run ${challenge.dockerService}`, (err, stdout, stderr) => {
-    if (err) {
-      console.error(err);
-      console.error('Stdout:', stdout);
-      console.error('Stderr:', stderr);
-      res.status(500).send('Erreur lors du démarrage du challenge');
-      return;
-    }
-    res.send('Challenge démarré avec succès');
+
+  const dockerServices = Array.isArray(challenge.dockerService) ? challenge.dockerService : [challenge.dockerService];
+  let errors = [];
+  dockerServices.forEach(service => {
+    exec(`docker-compose up -d ${service}`, (err, stdout, stderr) => {
+      if (err) {
+        console.error(err);
+        console.error('Stdout:', stdout);
+        console.error('Stderr:', stderr);
+        errors.push(`Erreur lors du démarrage du service ${service}`);
+      }
+    });
   });
+
+  if(errors.length) {
+    res.status(500).send(errors.join('<br/>'));
+  } else {
+    res.send('Challenge démarré avec succès');
+  }
 });
+
 
 
 module.exports = router;
