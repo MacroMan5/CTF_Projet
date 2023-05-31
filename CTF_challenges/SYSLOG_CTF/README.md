@@ -25,9 +25,9 @@ Bienvenue dans le challenge CTF "CheckTheLog". Dans ce défi, votre mission est 
 Le flag à trouver est de format : `01253{Flag_ici}`
 
 ## Solutions 
-- Trouver le fichier ou on retrouve les logs : /var/log/
-- Trouver les logs simulant des auth SSH failed password 
-- Trouver une 
+- Trouver le fichier ou on retrouve les logs : /var/log/auth.log
+- Trouver les logs simulant des auth SSH failed password regarder s'il y des incohérences
+- Trouver une le flag encrypté en Base64 dans les logs
 
 ## Implémentation
 1. Création image docker - `docker build -t syslogSrv .`
