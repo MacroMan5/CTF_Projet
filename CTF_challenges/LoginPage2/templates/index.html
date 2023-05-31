@@ -29,7 +29,7 @@
       const currentTime = new Date();
       const x = currentTime.getHours();
       const y = currentTime.getMinutes();
-      const z = ["MTA=", "MjA=", "MzA=", "NDA="];
+      const z = ["MTE=", "MzY=", "NjY=", "NDg="];
       const xyz = z.map(value => {
         const zz = parseInt(atob(value), 10); 
         return (zz + x + y).toString(); 
